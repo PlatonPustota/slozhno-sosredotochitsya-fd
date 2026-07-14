@@ -16,5 +16,62 @@
 
 .header__rec {
   position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 20px;
+  padding-inline-end: 19px;
+  color: var(--accent-color);
 }
+
+.header__rec::after {
+  position: absolute;
+  content: "";
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  inset-block-start: 8px;
+  inset-inline-end: 0;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.decorated__zone {
+  position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+}
+
+
+
+
+
 
