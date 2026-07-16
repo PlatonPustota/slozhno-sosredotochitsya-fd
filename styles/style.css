@@ -70,6 +70,9 @@
   border-inline-start: 1px solid var(--accent-color);
 }
 
+.content-card__title_regular {
+  font-weight: 400;
+}
 
 
 
