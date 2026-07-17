@@ -74,6 +74,31 @@
   font-weight: 400;
 }
 
+.content-card__text:not(:last-child) {
+  margin-block-end: 10px;
+}
+
+.content-card__link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.content-card__link:hover {
+  border-block-end: 1px solid currentColor;
+}
+
+.content-card__link:focus {
+  outline: none;
+}
+
+.content-card__link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+
+
+
+
 
 
 
