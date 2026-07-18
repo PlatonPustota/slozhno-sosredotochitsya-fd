@@ -3,6 +3,7 @@
 .page {
   background-image: var(--background-image);
   background-color: var(--bg-color);
+  color: var(--text-color);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -10,12 +11,30 @@
 
 .header {
   position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  padding: 10px;
   block-size: 100vh;
   min-block-size: 668px;
 }
 
-.header__title {
-  color: var(--main-title-color);
+.header__theme-menu {
+  justify-self: end;
+  align-self: start;
+  margin-block-start: 65px;
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding: 0;
+  color: var(--accent-color);
+  background-color: transparent;
+  font: inherit;
+  text-transform: lowercase;
+}
+
+.header__text {
+  align-self: center;
 }
 
 .header__rec {
@@ -39,9 +58,11 @@
 }
 
 .header__title {
+  align-self: center;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--main-title-color);
 }
 
 .title-decor {
@@ -49,7 +70,11 @@
   color: var(--decorated-text-color);
 }
 
-.decorated__zone {
+.main { 
+  display: grid;
+  gap: 50px;
+}
+.decorated-zone {
   position: relative;
 }
 
