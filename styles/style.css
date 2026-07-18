@@ -1,6 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  font-family: 'IBM Plex mono', monospace;
+  font-size: 18px;
+  line-height: 130%;
   background-image: var(--background-image);
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -34,7 +37,7 @@
 }
 
 .header__text {
-  align-self: center;
+  align-self: end;
 }
 
 .header__rec {
@@ -70,9 +73,11 @@
   color: var(--decorated-text-color);
 }
 
-.main { 
+.main {
   display: grid;
   gap: 50px;
+  padding-inline: 10px;
+  padding-block-start: 40px;
 }
 .decorated-zone {
   position: relative;
@@ -101,6 +106,20 @@
   border-inline-start: 1px solid var(--accent-color);
 }
 
+.content-section {
+  display: grid;
+  gap: 20px;
+}
+
+.content-card {
+  display: grid;
+  gap: 10px;
+}
+
+.content-section__title {
+  color: var(--accent-color);
+}
+
 .content-card__title_regular {
   font-weight: 400;
 }
@@ -126,11 +145,12 @@
   outline: 1px solid currentColor;
 }
 
+.gallery {
+  display: grid;
+  gap: 10px;
+}
 
-
-
-
-
-
-
-
+.gallery__image {
+  display: block;
+  inline-size: 100%;
+}
