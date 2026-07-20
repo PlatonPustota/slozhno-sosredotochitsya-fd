@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: 'IBM Plex mono', monospace;
+  font-family: "IBM Plex mono", monospace;
   font-size: 18px;
   line-height: 130%;
   background-image: var(--background-image);
@@ -37,7 +37,7 @@
 }
 
 .header__text {
-  align-self: end;
+  align-self: center;
 }
 
 .header__rec {
@@ -153,4 +153,74 @@
 .gallery__image {
   display: block;
   inline-size: 100%;
+}
+
+.footer {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  block-size: 100vh;
+  min-block-size: 668px;
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--main-title-color);
+  text-shadow: 2px 2px var(--accent-color);
+}
+
+@media (width >= 768px) {
+  .header,
+  .footer {
+    padding: 20px;
+  }
+
+  .header__text {
+    justify-self: end;
+    inline-size: 50%;
+  }
+
+  .main {
+    padding-inline: 20px;
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+
+  .header__rec {
+    inset-block-start: 20px;
+    inset-inline-end: 30px;
+  }
+
+  .content-section_type_why {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .content-section_type_why .content-card {
+    grid-column: 2;
+  }
+
+  .content-section_type_reasons .content-section__title {
+    inline-size: 30%;
+  }
+
+  .content-section_type_advice {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .content-section_type_advice .content-section__subtitle,
+  .content-section_type_advice .content-card {
+    grid-column: 2;
+  }
+}
+
+@media (width >= 1024px) {
 }
