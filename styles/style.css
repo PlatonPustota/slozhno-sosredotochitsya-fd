@@ -216,11 +216,70 @@
     grid-template-columns: 1fr 2fr;
   }
 
+  .content-section_type_advice .content-section__title {
+    grid-row: 1 / span 6;
+    align-self: start;
+  }
+
   .content-section_type_advice .content-section__subtitle,
   .content-section_type_advice .content-card {
     grid-column: 2;
   }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+  }
+
+  .gallery__image {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .gallery__image:nth-child(1) {
+    grid-area: sunset;
+  }
+
+  .gallery__image:nth-child(2) {
+    grid-area: ice-cream;
+  }
+
+  .gallery__image:nth-child(3) {
+    grid-area: tape;
+  }
+
+  .gallery__image:nth-child(4) {
+    grid-area: books;
+  }
+
+  .gallery__image:nth-child(5) {
+    grid-area: street;
+  }
 }
 
 @media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    margin-block-start: 0;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    gap: 10px;
+  }
+
+  .content-section_type_reasons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .content-section_type_reasons .content-card {
+    grid-row: 2;
+    align-content: start;
+  }
 }
