@@ -29,11 +29,17 @@
 
 .header__theme-menu-button {
   border: none;
-  padding: 0;
-  color: var(--accent-color);
+  padding-inline: 13px;
+  padding-block: 1.5px;
+  color: var(--decor-color);
   background-color: transparent;
   font: inherit;
   text-transform: lowercase;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid currentColor;
+  pointer-events: none;
 }
 
 .header__text {
@@ -95,15 +101,15 @@
 .decorated-zone::before {
   inset-block-start: 10px;
   inset-inline-end: 10px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--decor-color);
+  border-inline-end: 1px solid var(--decor-color);
 }
 
 .decorated-zone::after {
   inset-block-end: 10px;
   inset-inline-start: 10px;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--decor-color);
+  border-inline-start: 1px solid var(--decor-color);
 }
 
 .content-section {
@@ -117,7 +123,7 @@
 }
 
 .content-section__title {
-  color: var(--accent-color);
+  color: var(--decor-color);
 }
 
 .content-card__title_regular {
