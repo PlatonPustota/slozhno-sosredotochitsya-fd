@@ -7,8 +7,26 @@
   --decorated-text-color: #353430;
   --main-title-color: #ffc2e6;
   --decor-color: #353430;
+  --button-hover-color: rgb(50 49 45 / 0.4);
 }
 
 :root.theme-light .header__rec {
   display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root.theme-auto {
+    --background-image: url("../images/cover-image-light.png");
+    --bg-color: #fff1f7;
+    --accent-color: #ff8dcb;
+    --text-color: #353430;
+    --decorated-text-color: #353430;
+    --main-title-color: #ffc2e6;
+    --decor-color: #353430;
+    --button-hover-color: rgb(50 49 45 / 0.4);
+  }
+
+  :root.theme-auto .header__rec {
+    display: none;
+  }
 }

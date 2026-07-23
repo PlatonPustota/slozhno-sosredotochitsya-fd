@@ -28,7 +28,7 @@
 }
 
 .header__theme-menu-button {
-  border: none;
+  border: 1px solid transparent;
   padding-inline: 13px;
   padding-block: 1.5px;
   color: var(--decor-color);
@@ -37,9 +37,21 @@
   text-transform: lowercase;
 }
 
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end-color: currentColor;
+}
+
 .header__theme-menu-button_active {
   border: 1px solid currentColor;
   pointer-events: none;
+}
+
+.header__theme-menu-button:not(.header__theme-menu-button_active):hover {
+  border-color: var(--button-hover-color);
 }
 
 .header__text {
