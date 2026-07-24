@@ -189,18 +189,37 @@
 }
 
 @media (width >= 768px) {
-  .header,
+  .header {
+    padding-block: 20px;
+    padding-inline: 0;
+  }
+
   .footer {
     padding: 20px;
+  }
+
+  .header__theme-menu {
+    justify-self: end;
+    align-self: start;
+    margin-block-start: 166px;
+    margin-inline-end: 20px;
+  }
+
+  .header__theme-menu-list {
+    display: grid;
+    gap: 10px;
   }
 
   .header__text {
     justify-self: end;
     inline-size: 50%;
+    margin-inline-end: 20px;
   }
 
   .main {
-    padding-inline: 20px;
+    gap: 80px;
+    padding-block-start: 60px;
+    padding-block-end: 60px;
   }
 
   .decorated-zone::before {

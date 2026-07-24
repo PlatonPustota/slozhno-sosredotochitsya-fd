@@ -20,4 +20,3 @@ jobs:
         uses: Yandex-Practicum/test-project-action@v1
         with:
           project: 'slozhno-sosredotochitsya-fd'
-ё
